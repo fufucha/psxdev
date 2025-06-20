@@ -1,0 +1,45 @@
+Disc XA_PSX
+
+  LeadIn XA
+    Empty 1000
+    PostGap 150
+  EndTrack
+
+  Track XA
+    Pause 150
+
+    Volume ISO9660
+      PrimaryVolume
+        SystemIdentifier "PLAYSTATION"
+        VolumeIdentifier "PSXDEMO"
+        VolumeSetIdentifier "PSXDEMO"
+        PublisherIdentifier "HOMEDEV"
+        DataPreparerIdentifier "HOMEDEV"
+        ApplicationIdentifier "PSXDEMO"
+        Lpath
+        OptionalLpath
+        Mpath
+        OptionalMpath
+
+        Hierarchy
+          File SYSTEM.CNF;1
+            XAFileAttributes Form1 Data
+            Source SYSTEM.CNF
+          EndFile
+
+          File MAIN.EXE;1
+            XAFileAttributes Form1 Data
+            Source MAIN.EXE
+          EndFile
+        EndHierarchy
+      EndPrimaryVolume
+    EndVolume
+
+    PostGap 150
+  EndTrack
+
+  LeadOut XA
+    Empty 150
+  EndTrack
+
+EndDisc

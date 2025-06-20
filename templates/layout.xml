@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iso_project image_name="out.iso" no_xa="1">
+  <track type="data">
+    <volume_id>PSXDEMO</volume_id>
+    <directory_tree>
+      <file src="SYSTEM.CNF" name="SYSTEM.CNF" />
+      <file src="MAIN.EXE" name="MAIN.EXE" />
+      <dummy sectors="1024"/>
+    </directory_tree>
+  </track>
+</iso_project>
