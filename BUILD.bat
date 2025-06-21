@@ -20,7 +20,7 @@ if exist %TMPDIR% rmdir /s /q %TMPDIR%
 mkdir %OUTDIR%
 mkdir %TMPDIR%
 
-bin\PSYQ\CCPSX.EXE -O2 -G0 -Xo$80010000 -Wall -o %TMPDIR%\MAIN.CPE %SRC%
+bin\PSYQ\CCPSX.EXE -O2 -G0 -Xo$80010000 -Wall -Ibin\PSYQ\include -Lbin\PSYQ\lib -o %TMPDIR%\MAIN.CPE %SRC%
 if errorlevel 1 (
     echo CCPSX failed.
     pause

@@ -1,2 +1,4 @@
+/bin/EMU/*
+!/bin/EMU/NO$PSX.EXE
 /build/*
 /tpm/*
