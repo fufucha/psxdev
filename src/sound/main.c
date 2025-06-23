@@ -37,7 +37,7 @@ typedef struct {
     float duration;
     int duration_sec;
     int duration_cent;
-	int pitch;
+    int pitch;
 } VagInfo;
 
 void parse_vag_info(const unsigned char *vag, int total_size, VagInfo *info)
@@ -61,7 +61,7 @@ void parse_vag_info(const unsigned char *vag, int total_size, VagInfo *info)
         ((int)vag[VAG_HEADER_RATE_OFF + 3]);
     if (info->sample_rate == 0) {
         info->sample_rate = 44100;
-	}
+    }
 
     // read data size (big-endian, offset 0x0C)
     info->data_size =
@@ -74,7 +74,7 @@ void parse_vag_info(const unsigned char *vag, int total_size, VagInfo *info)
     info->duration = (float)nb_samples / (float)info->sample_rate;
     info->duration_sec = (int)(info->duration);
     info->duration_cent = (int)((info->duration - (float)info->duration_sec) * 100);
-	info->pitch = (int)(4096.0f * (float)info->sample_rate / 44100.0f);
+    info->pitch = (int)(4096.0f * (float)info->sample_rate / 44100.0f);
 }
 
 void play_vag(const unsigned char *data, int size, int pitch)
@@ -142,8 +142,8 @@ int main() {
         ClearOTagR(ot, OT_SIZE);
 
         FntPrint(fnt_id, "Name: %s\n", vi.name);
-		FntPrint(fnt_id, "Rate: %d Hz\n", vi.sample_rate);
-		FntPrint(fnt_id, "Duration: %d.%02d sec\n", vi.duration_sec, vi.duration_cent);
+        FntPrint(fnt_id, "Rate: %d Hz\n", vi.sample_rate);
+        FntPrint(fnt_id, "Duration: %d.%02d sec\n", vi.duration_sec, vi.duration_cent);
         FntFlush(fnt_id);
 
         DrawOTag(ot + OT_SIZE - 1);
