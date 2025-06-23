@@ -16,14 +16,14 @@ if not exist %IMGNAME%.bmp (
 if exist %IMGNAME%.tim del %IMGNAME%.tim
 if exist %IMGNAME%.h del %IMGNAME%.h
 
-%ROOT%\bin\tim\BMP2TIM.EXE %IMGNAME%.bmp %IMGNAME%.tim
+%ROOT%\bin\TIM\BMP2TIM.EXE %IMGNAME%.bmp %IMGNAME%.tim
 if not exist %IMGNAME%.tim (
     echo BMP2TIM failed. No TIM created.
     pause
     exit /b 1
 )
 
-%ROOT%\bin\tim\bin2h.exe %IMGNAME%.tim %IMGNAME%.h image
+%ROOT%\bin\bin2h.exe %IMGNAME%.tim %IMGNAME%.h image
 if not exist %IMGNAME%.h (
     echo BIN2H failed. No header created.
     pause

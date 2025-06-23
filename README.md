@@ -40,3 +40,8 @@ BUILD.bat
 Run `src/triangle/BUILD.bat` to compile the project. This script invokes the main `BUILD.bat` at the root, handles all compilation steps, and writes the final ISO and binaries to `build/triangle/`.
 
 You can also use `src/triangle/RUN.bat`, which builds the project if needed and launches the generated ISO in `NO$PSX` for instant preview.
+
+## References
+
+- https://www.psxdev.net/
+- https://www.problemkaputt.de/psx-spx.htm
